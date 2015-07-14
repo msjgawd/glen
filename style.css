@@ -1,0 +1,227 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Layout positioning */
+
+.center {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-content: center;
+    -webkit-align-content: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    text-align: center;
+}
+
+.center_horizontal {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center_vertical {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-content: center;
+    -webkit-align-content: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+
+.fixed {
+    position: fixed;
+}
+
+/* Layout sizes */
+
+.fill_view {
+    width: 100%
+}
+
+.fill_view, .fill_height, .partial_height {
+    height: 25em;
+}
+
+.fill_width {
+    width: 100%;
+}
+
+.height100p {
+    height: 100%;
+}
+
+.left40 {
+    float: left;
+    width: 40%;
+}
+
+.left50 {
+    float: left;
+    width: 50%;
+}
+
+.left80 {
+    float: left;
+    width: 80%;
+}
+
+.right40 {
+    float: right;
+    width: 40%;
+}
+
+.right50 {
+    float: right;
+    width: 50%;
+}
+
+.right80 {
+    float: right;
+    width: 80%;
+}
+
+/* Misc layout stuff */
+.phinactive {
+    display: none;
+}
+
+div.background {
+    z-index: -1;
+}
+
+/* navbar */
+div.navbar {
+    height: 50px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #f0f0f0;
+    border-bottom-style: solid;
+    border-bottom-color: #e1e1e1;
+    border-bottom-width: 1px;
+    padding-left: 100px;
+    z-index: 2;
+}
+
+div.navbarplaceholder {
+    height: 50px;
+}
+
+ul#navbarlist {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+a.navbar:link, a.navbar:visited {
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    float: left;
+    width: 100px;
+    height: 100%;
+    color: #444;
+}
+
+a.navbar:hover, a.navbar:active {
+    background-color: #e5e5e5;
+    color: #000000;
+}
+
+a.selected {
+    background-color: #dddddd;
+}
+
+/* Footer */
+a.footer {
+    text-decoration: none;
+    color: #551112;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+a.footer:hover {
+    color: red;
+}
+
+p.footer {
+    margin: 0;
+    padding-right: 20px;
+    color: #662232;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* General Page */
+
+div.footer {
+    height: 50px;
+    text-align: right;;
+}
+
+.placeholder {
+    z-index: -2;
+}
+
+.caption_center {
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.caption_left {
+    float: left;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.caption_right {
+    float: right;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.caption_bottom_right {
+    position: relative;
+    float: right;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+}
+
+.caption {
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.stretch_background {
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Facilities */
+#facilities_slideshow {
+    background-color: darkgreen;
+}
+
+#facility8_caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+}

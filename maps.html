@@ -1,0 +1,193 @@
+<!-- TODO: This page needs a major cleanup, blame usrv -->
+
+<html>
+<head>
+    <title>The Glen at Maple Falls</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="generic.js"></script>
+
+    <!-- Stuff 
+                <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+</head>
+
+<style>
+    #tabs ul li {
+        cursor: pointer;
+        display: inline-block;
+        list-style-type: none;
+        outline: none;
+        border-radius: 3px 3px 0px 0px;
+        transition: all linear 0.15s;
+        padding: 1em 1em 1em 1em;
+    }
+
+    #tabs ul li.selected {
+        background-color: #8855dd;
+    }
+
+    #tabs ul li.unselected {
+        background-color: #aa55ff;
+    }
+
+    #tabs ul li a {
+        text-decoration: none;
+        font-weight: 900;
+        outline: none;
+        font-size: 1.2em;
+        color: #555;
+        display: inline-block;
+    }
+
+    #tabs ul {
+        font-family: 'Roboto Condensed', sans-serif;
+        text-decoration: none;
+        outline: none;
+        margin-left: -2.5em;
+    }
+
+    #tabs {
+        padding: 0.5em 2em 2em 2em;
+        margin: 2em;
+        background-color: #aa99aa;
+    }
+
+    h1 {
+        vertical-align: top;
+        margin: 0 0 0 1em;
+        padding: 1em 1em 0em 0em;
+        text-align: left;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    #tabs ul li.selected a {
+        color: #fff;
+    }
+
+    .map {
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .tabs {
+        background-color: #8855dd;
+        padding: 1em 1em 1em 1em;
+        margin-top: 0;
+    }
+
+    .tabs img {
+        max-width: 75%;
+        max-height: 75%;
+    }
+
+    .tabs {
+        height: 32em;
+    }
+
+    .tabs p {
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1.5em;
+        font-weight: 700;
+        padding-bottom: 0.5em;
+        padding-top: 0em;
+        color: white;
+    }
+
+</style>
+
+<body>
+<div class="navbar" id="navbar">
+    <ul id="navbarlist">
+        <li><a class="navbar" href="index.html">Home</a></li>
+        <li><a class="navbar selected" href="#maps">Maps</a></li>
+        <li><a class="navbar" href="#contact">Contact</a></li>
+        <li><a class="navbar" href="facilities.html">Facilities</a></li>
+        <li><a class="navbar" href="#members">Members</a></li>
+        <li><a class="navbar" href="#publicdocs">Public Docs</a></li>
+    </ul>
+</div>
+<div id="navbarplaceholder" class="navbarplaceholder placeholder"></div>
+<div id="content" class="fill_width partial_height" style="background-color:#dddded;">
+    <h1>Maps</h1>
+
+    <!-- tabs -->
+
+    <div id="tabs">
+        <ul style="margin-bottom: 0">
+            <li class="selected"><a href="#tabs-glen">Glen Map</a></li>
+            <li class="unselected"><a href="#tabs-1">Division 1</a></li>
+            <li class="unselected"><a href="#tabs-2">Division 2</a></li>
+            <li class="unselected"><a href="#tabs-3">Division 3</a></li>
+            <li class="unselected"><a href="#tabs-4">Division 4</a></li>
+            <li class="unselected"><a href="#tabs-5">Division 5</a></li>
+            <li class="unselected"><a href="#tabs-6">Division 6</a></li>
+            <li class="unselected"><a href="#tabs-7">Division 7</a></li>
+        </ul>
+
+        <!-- This is causing the viewport to be very tall, needs fixing -->
+
+        <div class="tabs" id="tabs-glen">
+            <p>A Map of THE GLEN</p>
+            <img class="map" src="images/maps/glenmap-1a.jpg"/>
+        </div>
+        <div class="tabs" id="tabs-1">
+            <p>Division 1</p>
+            <img class="map" src="images/maps/division1.jpg"/>
+        </div>
+        <div class="tabs" id="tabs-2">
+            <p>Division 2</p>
+            <img class="map" src="images/maps/division2.jpg"/>
+        </div>
+        <div class="tabs" id="tabs-3">
+            <p>Division 3</p>
+            <img class="map" src="images/maps/division3.jpg"/>
+        </div>
+        <div class="tabs" id="tabs-4">
+            <p>Division 4</p>
+            <img class="map" src="images/maps/division4.jpg"/>
+        </div>
+        <div class="tabs" id="tabs-5">
+            <p>Division 5</p>
+            <img class="map" src="images/maps/division5.jpg"/>
+        </div>
+        <div class="tabs" id="tabs-6">
+            <p>Division 6</p>
+            <img class="map" src="images/maps/division6.jpg"/>
+        </div>
+        <div class="tabs" id="tabs-7">
+            <p>Division 7</p>
+            <img class="map" src="images/maps/division7.jpg"/>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    $('#tabs ul li').click(function () {
+        var $this = $(this);
+        $(this).siblings().removeClass('selected');
+        $(this).siblings().addClass('unselected');
+        $(this).removeClass('unselected');
+        $(this).addClass('selected');
+        $this.children("a").click();
+    }).hover(function () {
+        if ($(this).hasClass('unselected'))
+            $(this).children('a').css('color', '#ddd');
+    }, function () {
+        if ($(this).hasClass('unselected'))
+            $(this).children('a').css('color', '#555');
+    });
+</script>
+
+</body>
+</html>
