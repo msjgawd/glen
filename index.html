@@ -1,10 +1,90 @@
 <html>
 <head>
     <title>The Glen at Maple Falls</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <link href='style.css' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script type="text/javascript" src="generic.js"></script>
+    <script type="text/javascript" src="js/generic.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <style>
+        #index_heading {
+            position: relative;
+            height: 75%;
+        }
+
+        #index_heading_background, #index_heading_back_background {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #index_heading_background {
+            background-image: url('images/slideshow/0.jpg');
+        }
+
+        #index_welcome {
+            color: white;
+            font-size: 7em;
+        }
+
+        #index_desc_div {
+            padding: 1em 0;
+            background-color: #ff0;
+        }
+
+        #index_desc_p {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        #index_info {
+            display: table;
+            table-layout: fixed;
+        }
+
+        #index_whats_new, #index_quick_links, #index_fire_condition {
+            height: 100%;
+            display: table-cell;
+        }
+
+        #index_whats_new {
+            background-color: #f00;
+        }
+
+        #index_quick_links {
+            background-color: #0f0;
+        }
+
+        #index_fire_condition {
+            background-color: #00f;
+            font-size: 2em;
+        }
+
+        #index_fire_condition_red {
+            background-color: #00f;
+            color: red;
+            font-size: 3.5em;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+        }
+
+        .index_info_item {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .index_info_heading {
+            margin: 0.5em auto;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            font-weight: bold;
+            font-size: 2.5em;
+        }
+    </style>
 </head>
 <body>
 <div class="navbar" id="navbar">
@@ -18,30 +98,46 @@
     </ul>
 </div>
 <div id="navbarplaceholder" class="navbarplaceholder placeholder"></div>
-<div id="page1" class="fill_view center" style="background-color:#ff0000;"><h1>Welcome to the Glen</h1></div>
-<div id="page2" class="fill_view" style="background-color:#aa0000;">
-    <div class="caption_left center fill_height">
-        A beautiful recreational property located in Maple Falls, Washington.
-        The Glen is close to Mount Baker, and also a short drive to Bellingham.
-        The Canadian border is less than half an hour away.
-        <br><br>
-        Enjoy your own retreat and property here at the Glen.
-        A very desirable getaway destination, yet so close to home.
-    </div>
+<div id="index_heading" class="fill_width stretch_background center roboto-condensed">
+    <div id="index_heading_back_background" class="fill_width stretch_background"></div>
+    <div id="index_heading_background" class="fill_width stretch_background"></div>
+    <p id="index_welcome">Welcome to the Glen</p>
 </div>
-<div id="page3" class="fill_view" style="background-color:#550000;">
-    <div class="caption_right center fill_height">
-        Hei
-    </div>
+<div id="index_desc_div" class="fill_width roboto-condensed">
+    <p id="index_desc_p">
+        A beautiful recreational property located in Maple Falls, Washington. The Glen is close to Mount Baker, and also
+        a short drive to Bellingham. The Canadian border is less than half an hour away.
+        <br/><br/>
+        Enjoy your own retreat and property here at the Glen. A very desirable getaway destination, yet so close to
+        home.
+    </p>
 </div>
-<div id="page4" class="fill_view" style="background-color:#fff;">
-    <div class="caption center_horizontal center fill_height">
-        HEII
+<div id="index_info" class="fill_width">
+    <div id="index_whats_new" class="index_info_item">
+        <p class="index_info_heading">What's new</p>
+        <ul>
+            <li>Treasurer Reports added to "Minutes" page <a href="#">HERE</a>.</li>
+        </ul>
     </div>
-</div>
-<div id="page5" class="fill_view" style="position: relative; background-color:#220000;">
-    <div class="caption_bottom_right">
-        heiiii
+    <div id="index_quick_links" class="index_info_item">
+        <p class="index_info_heading">Quick Links</p>
+        <ul>
+            <li>Forum registration is completed <a href="#">HERE</a>.</li>
+            <li>Forum registration tutorial: <a href="#">HERE</a>.</li>
+            <li>The latest approved Minutes are <a href="#">HERE</a>.</li>
+            <li>The latest Pipeline is published <a href="#">HERE</a>.</li>
+            <li>Infrastructure updated news <a href="#">HERE</a>.</li>
+            <li>Disc Golf Link <a href="#">HERE</a>.</li>
+        </ul>
+    </div>
+    <div id="index_fire_condition" class="index_info_item">
+        <div class="center" style="height: 100%">
+            <p>
+                Fire condition is
+                <br/>
+                <span id="index_fire_condition_red">RED</span>
+            </p>
+        </div>
     </div>
 </div>
 </body>

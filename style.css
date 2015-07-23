@@ -94,6 +94,11 @@ div.background {
     z-index: -1;
 }
 
+/* Fonts */
+.roboto-condensed {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 /* navbar */
 div.navbar {
     height: 50px;
