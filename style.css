@@ -151,19 +151,19 @@ a.selected {
 /* Footer */
 a.footer {
     text-decoration: none;
-    color: #551112;
+    color: #3d3d3d;
     font-weight: bold;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 a.footer:hover {
-    color: red;
+    color: #65dfff;
 }
 
 p.footer {
     margin: 0;
     padding-right: 20px;
-    color: #662232;
+    color: #3d3d3d;
     font-family: 'Roboto Condensed', sans-serif;
 }
 

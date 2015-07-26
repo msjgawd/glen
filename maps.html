@@ -7,8 +7,6 @@
     <link href='style.css' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/generic.js"></script>
-
-    <!-- Stuff <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script>
         $(function () {
@@ -18,6 +16,9 @@
 </head>
 
 <style>
+    #content {
+        overflow: auto;
+    }
     #tabs ul li {
         cursor: pointer;
         display: inline-block;
@@ -29,11 +30,13 @@
     }
 
     #tabs ul li.selected {
-        background-color: #8855dd;
+        background-color: #bbb;
+        color: #eee;
     }
 
     #tabs ul li.unselected {
-        background-color: #aa55ff;
+        background-color: #d8d8d8;
+        color: #ddd;
     }
 
     #tabs ul li a {
@@ -41,7 +44,7 @@
         font-weight: 900;
         outline: none;
         font-size: 1.2em;
-        color: #555;
+        color: #888;
         display: inline-block;
     }
 
@@ -55,7 +58,7 @@
     #tabs {
         padding: 0.5em 2em 2em 2em;
         margin: 2em;
-        background-color: #aa99aa;
+        background-color: #ccc;
     }
 
     h1 {
@@ -67,7 +70,7 @@
     }
 
     #tabs ul li.selected a {
-        color: #fff;
+        color: #eee;
     }
 
     .map {
@@ -77,7 +80,7 @@
     }
 
     .tabs {
-        background-color: #8855dd;
+        background-color: #bbb;
         padding: 1em 1em 1em 1em;
         margin-top: 0;
     }
@@ -107,15 +110,15 @@
 <div class="navbar" id="navbar">
     <ul id="navbarlist">
         <li><a class="navbar" href="index.html">Home</a></li>
-        <li><a class="navbar selected" href="#maps">Maps</a></li>
-        <li><a class="navbar" href="#contact">Contact</a></li>
+        <li><a class="navbar selected" href="#">Maps</a></li>
+        <li><a class="navbar" href="contact.html">Contact</a></li>
         <li><a class="navbar" href="facilities.html">Facilities</a></li>
         <li><a class="navbar" href="#members">Members</a></li>
         <li><a class="navbar" href="#publicdocs">Public Docs</a></li>
     </ul>
 </div>
 <div id="navbarplaceholder" class="navbarplaceholder placeholder"></div>
-<div id="content" class="fill_width partial_height" style="background-color:#dddded;">
+<div id="content" class="fill_width min_partial_height" style="background-color:#d7d7d7;">
     <h1>Maps</h1>
 
     <!-- tabs -->
@@ -175,13 +178,13 @@
         $(this).siblings().addClass('unselected');
         $(this).removeClass('unselected');
         $(this).addClass('selected');
-        $this.children("a").click();
+        $(this).children("a").click();
     }).hover(function () {
         if ($(this).hasClass('unselected'))
-            $(this).children('a').css('color', '#ddd');
+            $(this).children('a').css('color', '#fff');
     }, function () {
         if ($(this).hasClass('unselected'))
-            $(this).children('a').css('color', '#555');
+            $(this).children('a').css('color', '#888');
     });
 </script>
 
