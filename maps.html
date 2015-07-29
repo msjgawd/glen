@@ -36,7 +36,6 @@
 
     #tabs ul li.unselected {
         background-color: #d8d8d8;
-        color: #ddd;
     }
 
     #tabs ul li a {
@@ -46,6 +45,10 @@
         font-size: 1.2em;
         color: #888;
         display: inline-block;
+    }
+
+    #tabs ul li a.hover {
+        color: #fff;
     }
 
     #tabs ul {
@@ -173,7 +176,6 @@
 
 <script>
     $('#tabs ul li').click(function () {
-        var $this = $(this);
         $(this).siblings().removeClass('selected');
         $(this).siblings().addClass('unselected');
         $(this).removeClass('unselected');
@@ -181,10 +183,9 @@
         $(this).children("a").click();
     }).hover(function () {
         if ($(this).hasClass('unselected'))
-            $(this).children('a').css('color', '#fff');
+            $(this).children('a').addClass('hover');
     }, function () {
-        if ($(this).hasClass('unselected'))
-            $(this).children('a').css('color', '#888');
+        $(this).children('a').removeClass('hover');
     });
 </script>
 
