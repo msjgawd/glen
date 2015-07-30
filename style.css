@@ -113,6 +113,10 @@ div.background {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.roboto-slab {
+    font-family: 'Roboto Slab', sans-serif;
+}
+
 /* navbar */
 div.navbar {
     height: 50px;
