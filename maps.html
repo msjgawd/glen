@@ -130,14 +130,14 @@
 
     <div id="tabs">
         <ul style="margin-bottom: 0">
-            <li class="selected"><a href="#tabs-glen">Glen Map</a></li>
-            <li class="unselected"><a href="#tabs-1">Division 1</a></li>
-            <li class="unselected"><a href="#tabs-2">Division 2</a></li>
-            <li class="unselected"><a href="#tabs-3">Division 3</a></li>
-            <li class="unselected"><a href="#tabs-4">Division 4</a></li>
-            <li class="unselected"><a href="#tabs-5">Division 5</a></li>
-            <li class="unselected"><a href="#tabs-6">Division 6</a></li>
-            <li class="unselected"><a href="#tabs-7">Division 7</a></li>
+            <li id="tabs-glen-tab" class="selected"><a href="#tabs-glen">Glen Map</a></li>
+            <li id="tabs-1-tab" class="unselected"><a href="#tabs-1">Division 1</a></li>
+            <li id="tabs-2-tab" class="unselected"><a href="#tabs-2">Division 2</a></li>
+            <li id="tabs-3-tab" class="unselected"><a href="#tabs-3">Division 3</a></li>
+            <li id="tabs-4-tab" class="unselected"><a href="#tabs-4">Division 4</a></li>
+            <li id="tabs-5-tab" class="unselected"><a href="#tabs-5">Division 5</a></li>
+            <li id="tabs-6-tab" class="unselected"><a href="#tabs-6">Division 6</a></li>
+            <li id="tabs-7-tab" class="unselected"><a href="#tabs-7">Division 7</a></li>
         </ul>
 
         <div class="tabs" id="tabs-glen">
@@ -177,17 +177,23 @@
 </div>
 
 <script>
-    $('#tabs ul li').click(function () {
-        $(this).siblings().removeClass('selected');
-        $(this).siblings().addClass('unselected');
-        $(this).removeClass('unselected');
-        $(this).addClass('selected');
-        $(this).children("a").click();
-    }).hover(function () {
-        if ($(this).hasClass('unselected'))
-            $(this).children('a').addClass('hover');
-    }, function () {
-        $(this).children('a').removeClass('hover');
+    $(document).ready(function () {
+        $('#tabs ul li').click(function () {
+            if ($(this).hasClass('selected')) return;
+            $(this).siblings().removeClass('selected');
+            $(this).siblings().addClass('unselected');
+            $(this).removeClass('unselected');
+            $(this).addClass('selected');
+            $(this).children("a").click();
+            location.hash = $(this).children('a').attr('href');
+        }).hover(function () {
+            if ($(this).hasClass('unselected'))
+                $(this).children('a').addClass('hover');
+        }, function () {
+            $(this).children('a').removeClass('hover');
+        });
+        $(location.hash + '-tab').siblings().removeClass('selected').addClass('unselected');
+        $(location.hash + '-tab').removeClass('unselected').addClass('selected');
     });
 </script>
 
