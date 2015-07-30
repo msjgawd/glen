@@ -132,7 +132,7 @@ a.navbar:link, a.navbar:visited {
     justify-content: center;
     align-content: center;
     float: left;
-    width: 100px;
+    width: 7.5em;
     height: 100%;
     color: #444;
 }
