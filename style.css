@@ -1,6 +1,18 @@
-body {
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Condensed|Roboto+Slab:400,300);
+
+html, body {
     padding: 0;
     margin: 0;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#content {
+    padding: 1em
 }
 
 /* Layout positioning */
@@ -17,7 +29,7 @@ body {
     text-align: center;
 }
 
-.center_horizontal {
+.center_horizontal_in_parent {
     margin-left: auto;
     margin-right: auto;
 }
@@ -29,6 +41,10 @@ body {
     -webkit-flex-direction: column;
     justify-content: center;
     -webkit-justify-content: center;
+}
+
+.center_text {
+    text-align: center;
 }
 
 .fixed {
@@ -49,7 +65,7 @@ body {
     width: 100%;
 }
 
-.height100p {
+.height100 {
     height: 100%;
 }
 
@@ -171,7 +187,6 @@ p.footer {
     background: white;
     border-radius: 3px;
     border-collapse: collapse;
-    margin: 2%;
     padding: 5px;
     /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
     animation: float 5s infinite;
@@ -256,7 +271,7 @@ p.footer {
 
 div.footer {
     height: 50px;
-    text-align: right;;
+    text-align: right;
 }
 
 .placeholder {
