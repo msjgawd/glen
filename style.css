@@ -171,16 +171,14 @@ p.footer {
     background: white;
     border-radius: 3px;
     border-collapse: collapse;
-    height: 40%;
-    width: 70%;
     margin: 2%;
     padding: 5px;
-    /*            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
     animation: float 5s infinite;
 }
 
 .fancy_table thead th {
-    color: #D5DDE5;;
+    color: #D5DDE5;
     background: #082208;
     border-bottom: 4px solid #9ea7af;
     border-right: 1px solid #343a45;
@@ -188,7 +186,7 @@ p.footer {
     font-weight: 100;
     padding: 24px;
     text-align: left;
-    /*            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);*/
+    /*text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);*/
     vertical-align: middle;
 }
 
@@ -207,7 +205,7 @@ p.footer {
     color: #666B85;
     font-size: 16px;
     font-weight: normal;
-    /*            text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1); */
+    /*text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1); */
 }
 
 .fancy_table tbody tr:first-child {
@@ -237,7 +235,7 @@ p.footer {
     vertical-align: middle;
     font-weight: 300;
     font-size: 18px;
-    /*            text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);*/
+    /*text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);*/
     border-right: 1px solid #C1C3D1;
 }
 
