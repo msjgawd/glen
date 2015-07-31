@@ -51,6 +51,17 @@ html, body {
     position: fixed;
 }
 
+.vertical_align_container {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+}
+
+.vertical_align {
+    height: inherit;
+    display: table-cell;
+}
+
 /* Layout sizes */
 
 .fill_view {
