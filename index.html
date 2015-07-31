@@ -29,6 +29,45 @@
             font-size: 7em;
         }
 
+        #index_slideshow_nav_list_container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        #index_slideshow_nav_list {
+            list-style-type: none;
+            overflow: auto;
+            width: 24.9em;
+        }
+
+        #index_slideshow_nav_list li {
+            float: left;
+            width: 0.6em;
+            height: 0.6em;
+            margin: 0.5em;
+        }
+
+        #index_slideshow_nav_list li div {
+            cursor: pointer;
+            text-decoration: none;
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            position: absolute;
+            background-color: #fff;
+        }
+
+        #index_slideshow_nav_list li div.selected {
+            background-color: #63ddff;
+        }
+
+        #index_slideshow_nav_list li div:not(.selected):hover {
+            background-color: #aaa;
+        }
+
         #index_desc_div {
             padding: 1em 0;
             background-color: rgba(0, 0, 0, 0.6);
@@ -95,6 +134,10 @@
     <div id="index_heading_back_background" class="fill_width stretch_background"></div>
     <div id="index_heading_background" class="fill_width stretch_background"></div>
     <p id="index_welcome">Welcome to the Glen</p>
+
+    <div id="index_slideshow_nav_list_container">
+        <ul id="index_slideshow_nav_list" class="center_horizontal_in_parent unhighlightable"></ul>
+    </div>
 </div>
 <div id="index_desc_div" class="fill_width roboto-condensed">
     <p id="index_desc_p">
