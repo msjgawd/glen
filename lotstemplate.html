@@ -46,9 +46,9 @@
     <p id="lfs_heading" class="center_text">Lots for Sale</p>
 
     {% for division in lots %}
-        <p id="lfs_div{{ division[0] }}_label" class="center_text lfs_div_label"><a
-                href="maps.html#tabs-{{ division[0] }}">Division {{ division[0] }}</a></p>
-        <table id="lfs_div{{ division[0] }}" class="fancy_table center_horizontal_in_parent lfs_table">
+        <p id="lfs_div{{ division['number'] }}_label" class="center_text lfs_div_label"><a
+                href="maps.html#tabs-{{ division['number'] }}">Division {{ division['number'] }}</a></p>
+        <table id="lfs_div{{ division['number'] }}" class="fancy_table center_horizontal_in_parent lfs_table">
             <thead>
             <tr>
                 <th>#</th>
@@ -61,7 +61,7 @@
             </tr>
             </thead>
             <tbody>
-            {% for lot in division[1] %}
+            {% for lot in division['lots'] %}
                 <tr>
                     <td>{{ lot['number'] }}</td>
                     <td>{{ 'Yes' if lot['trailer'] else 'No' }}</td>

@@ -1,3 +1,5 @@
+import json
+
 from jinja2 import Template
 from lxml import html
 import requests
@@ -34,10 +36,13 @@ for table in tree.xpath('/html/body/div/table | /html/body/div/center/table'):
             lot['currency'] = pricestring[max(pricestring.find('U'), pricestring.find('C')):]
             if lot['currency'] == 'US':
                 lot['currency'] = 'USD'
-        lot['contact'] = cells[7].text_content().strip().replace('\t', '').replace('\n', '<br/>')
+        lot['contact'] = cells[7].text_content().strip().replace('\t', '').replace('\r', '').replace('\n', '<br/>')
         divlots.append(lot)
     if not f:
-        lots.append([i, divlots])
+        lots.append({'number': i, 'lots': divlots})
+
+lotsjson = open('lots.json', 'w')
+lotsjson.write(json.dumps(lots, indent=4))
 
 lfspage = Template(open('lotstemplate.html', 'r').read())
 open('lots.html', 'w').write(lfspage.render(lots=lots).encode('ascii', 'replace'))
