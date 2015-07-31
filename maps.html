@@ -18,6 +18,7 @@
     #content {
         overflow: auto;
     }
+
     #tabs ul li {
         cursor: pointer;
         display: inline-block;
@@ -118,7 +119,8 @@
         <li><a class="navbar" href="lots.html">Lots for Sale</a></li>
         <li><a class="navbar" href="#members">Members</a></li>
         <li><a class="navbar" href="pubdocs.html">Public Docs</a></li>
-        <li><a class="navbar" href="http://images.drivebc.ca/bchighwaycam/pub/html/www/index-Northern.html" target="_blank">Border
+        <li><a class="navbar" href="http://images.drivebc.ca/bchighwaycam/pub/html/www/index-Northern.html"
+               target="_blank">Border
             Cams</a></li>
     </ul>
 </div>
@@ -185,15 +187,15 @@
             $(this).removeClass('unselected');
             $(this).addClass('selected');
             $(this).children("a").click();
-            location.hash = $(this).children('a').attr('href');
+            location.hash = $(this).children('a').attr('href').split('-')[1];
         }).hover(function () {
             if ($(this).hasClass('unselected'))
                 $(this).children('a').addClass('hover');
         }, function () {
             $(this).children('a').removeClass('hover');
         });
-        $(location.hash + '-tab').siblings().removeClass('selected').addClass('unselected');
-        $(location.hash + '-tab').removeClass('unselected').addClass('selected');
+        $('#tabs-' + location.hash.substr(1) + '-tab').siblings().removeClass('selected').addClass('unselected');
+        $('#tabs-' + location.hash.substr(1) + '-tab').removeClass('unselected').addClass('selected');
     });
 </script>
 
