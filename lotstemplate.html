@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>The Glen at Maple Falls</title>
+    <link rel="shortcut icon" href=images/glenlogo.gif>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/generic.js"></script>
+    <style>
+        #lfs_heading {
+            margin: 0 0 0.5em 0;
+            font-family: 'Roboto Slab', sans-serif;
+            font-size: 3em;
+        }
+
+        .lfs_div_label {
+            font-family: 'Roboto Slab', sans-serif;
+            font-weight: 300;
+            font-size: 1.5em;
+        }
+
+        .lfs_table {
+            min-width: 70%;
+        }
+
+        #lfs_contact_info tbody tr td {
+            padding: 0.1em 0.4em;
+        }
+    </style>
+</head>
+<body style="background-color:rgba(245,245,245,1);">
+<div class="navbar" id="navbar">
+    <ul id="navbarlist">
+        <li><a class="navbar" href="index.html">Home</a></li>
+        <li><a class="navbar" href="maps.html">Maps</a></li>
+        <li><a class="navbar" href="contact.html">Contact</a></li>
+        <li><a class="navbar" href="facilities.html">Facilities</a></li>
+        <li><a class="navbar selected" href="#">Lots for Sale</a></li>
+        <li><a class="navbar" href="#members">Members</a></li>
+        <li><a class="navbar" href="pubdocs.html">Public Docs</a></li>
+        <li><a class="navbar" href="http://images.drivebc.ca/bchighwaycam/pub/html/www/index-Northern.html">Border
+            Cams</a></li>
+    </ul>
+</div>
+<div id="navbarplaceholder" class="navbarplaceholder placeholder"></div>
+<div id="content" class="fill_width min_partial_height">
+    <p id="lfs_heading" class="center_text">Lots for Sale</p>
+
+    {% for division in lots %}
+        <p id="lfs_div{{ division[0] }}_label" class="center_text lfs_div_label">Division {{ division[0] }}</p>
+        <table id="lfs_div{{ division[0] }}" class="fancy_table center_horizontal_in_parent lfs_table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Trailer</th>
+                <th>Shed</th>
+                <th>Gazebo</th>
+                <th>Price</th>
+                <th>Contact</th>
+                <th>Info</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for lot in division[1] %}
+                <tr>
+                    <td>{{ lot['number'] }}</td>
+                    <td>{{ 'Yes' if lot['trailer'] else 'No' }}</td>
+                    <td>{{ 'Yes' if lot['shed'] else 'No' }}</td>
+                    <td>{{ 'Yes' if lot['gazebo'] else 'No' }}</td>
+                    <td>{{ '${:,d}'.format(lot['price']) if lot['price'] > -1 else 'Pending' }} {{ lot['currency'] }}</td>
+                    <td>{{ lot['contact'] }}</td>
+                    <td><a href="#">></a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endfor %}
+
+    <p class="center_text">
+        Lots for Sale in this section may be owned by The Glen. If so, they will be clearly identified.
+        If you wish to contact the Glen office, here are the contact details:
+    </p>
+    <table id="lfs_contact_info" class="center_horizontal_in_parent">
+        <tbody>
+        <tr>
+            <td>Office Hours:</td>
+            <td>Thursday through Monday 9:30a.m. to 4:00p.m.</td>
+        </tr>
+        <tr>
+            <td>Office Phone:</td>
+            <td>(360) 599-2454</td>
+        </tr>
+        <tr>
+            <td>Office Fax:</td>
+            <td>(360) 599-2846</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><a href="mailto:glenmanager@theglenatmaplefalls.org">glenmanager@theglenatmaplefalls.org</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
