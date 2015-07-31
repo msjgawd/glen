@@ -208,11 +208,9 @@ p.footer {
     animation: float 5s infinite;
 }
 
-.fancy_table thead th {
+.fancy_table th {
     color: #D5DDE5;
     background: #082208;
-    border-bottom: 4px solid #9ea7af;
-    border-right: 1px solid #343a45;
     font-size: 23px;
     font-weight: 100;
     padding: 24px;
@@ -221,16 +219,24 @@ p.footer {
     vertical-align: middle;
 }
 
-.fancy_table thead th:first-child {
+.fancy_table thead th {
+    border-bottom: 4px solid #9ea7af;
+    border-right: 1px solid #343a45;
+}
+
+.fancy_table tbody th {
+    border-right: 4px solid #9ea7af;
+}
+
+.fancy_table tr:first-child :first-child {
     border-top-left-radius: 3px;
 }
 
-.fancy_table thead th:last-child {
+.fancy_table tr:first-child :last-child {
     border-top-right-radius: 3px;
-    border-right: none;
 }
 
-.fancy_table tbody tr {
+.fancy_table tr {
     border-top: 1px solid #C1C3D1;
     border-bottom: 1px solid #C1C3D1;
     color: #666B85;
@@ -239,27 +245,27 @@ p.footer {
     /*text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1); */
 }
 
-.fancy_table tbody tr:first-child {
+.fancy_table tr:first-child {
     border-top: none;
 }
 
-.fancy_table tbody tr:last-child {
+.fancy_table tr:last-child {
     border-bottom: none;
 }
 
-.fancy_table tbody tr:nth-child(odd) td {
+.fancy_table tr:nth-child(odd) td {
     background: #EBEBEB;
 }
 
-.fancy_table tbody tr:last-child td:first-child {
+.fancy_table tr:last-child :first-child {
     border-bottom-left-radius: 3px;
 }
 
-.fancy_table tbody tr:last-child td:last-child {
+.fancy_table tr:last-child :last-child {
     border-bottom-right-radius: 3px;
 }
 
-.fancy_table tbody tr td {
+.fancy_table tr td {
     background: #FFFFFF;
     padding: 20px;
     text-align: left;
@@ -270,16 +276,20 @@ p.footer {
     border-right: 1px solid #C1C3D1;
 }
 
-.fancy_table tbody tr td a {
+.fancy_table tr :last-child {
+    border-right: none;
+}
+
+.fancy_table tr td a {
     text-decoration: none;
     color: #199019;
 }
 
-.fancy_table tbody tr td a:hover {
+.fancy_table tr td a:hover {
     color: #195019;
 }
 
-.fancy_table tbody tr td:last-child {
+.fancy_table tr td:last-child {
     border-right: 0;
 }
 
