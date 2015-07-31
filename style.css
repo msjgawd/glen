@@ -160,9 +160,13 @@ a.navbar:link, a.navbar:visited {
     text-align: center;
     text-decoration: none;
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
     justify-content: center;
+    -webkit-justify-content: center;
     align-content: center;
+    -webkit-align-content: center;
     float: left;
     width: 7.5em;
     height: 100%;
@@ -178,23 +182,71 @@ a.selected {
     background-color: #dddddd;
 }
 
+/*@media screen and (-webkit-min-device-pixel-ratio:0) { 
+    /* Safari only override */
+/*    ::i-block-chrome,a.navbar {
+     padding-top: 5em;
+    }
+}*/
+
 /* Footer */
 a.footer {
     text-decoration: none;
-    color: #3d3d3d;
+    color: #d3d3d3;
     font-weight: bold;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
 a.footer:hover {
-    color: #65dfff;
+    color: #298533;
 }
 
 p.footer {
-    margin: 0;
-    padding-right: 20px;
-    color: #3d3d3d;
+    margin: .5em 0 2em 8em;
+    padding: 0;
+    color: #d3d3d3;
     font-family: 'Roboto Condensed', sans-serif;
+    font-size: 10px;
+}
+
+.footer ul {
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+    /*margin-top: 0.5em;*/
+}
+
+.footer ul li {
+    list-style-type:none;
+    padding: 0em 5px 0.25em 5px;
+}
+
+.footer ul li a{
+    text-decoration: none;
+    color: #d3d3d3;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 10px;
+}
+
+.footer ul li a:hover{
+    color: #333300;
+}
+
+
+
+ul#footer li {
+    display: inline;
+}
+
+div.footer {
+    height: 15vh;
+    text-align: left;
+}
+
+div.footer hr {
+   margin-left: 5em;
+   width: 30%;
+   border-top: 1px solid #bbbbbb;
+   border-bottom: none;
 }
 
 /* Fancy Tables */
@@ -295,11 +347,6 @@ p.footer {
 
 /* General Page */
 
-div.footer {
-    height: 50px;
-    text-align: right;
-}
-
 .placeholder {
     z-index: -2;
 }
@@ -310,18 +357,27 @@ div.footer {
     margin-right: auto;
     width: 25%;
     background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    color: #ddd;
 }
 
 .caption_left {
     float: left;
     width: 25%;
     background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    color: #ddd;
 }
 
 .caption_right {
     float: right;
     width: 25%;
     background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    color: #ddd;
 }
 
 .caption_bottom_right {
