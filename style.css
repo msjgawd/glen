@@ -225,22 +225,20 @@ p.footer {
 }
 
 .footer ul li {
-    list-style-type:none;
+    list-style-type: none;
     padding: 0em 5px 0.25em 5px;
 }
 
-.footer ul li a{
+.footer ul li a {
     text-decoration: none;
     color: #d3d3d3;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 10px;
 }
 
-.footer ul li a:hover{
+.footer ul li a:hover {
     color: #333300;
 }
-
-
 
 ul#footer li {
     display: inline;
@@ -252,10 +250,10 @@ div.footer {
 }
 
 div.footer hr {
-   margin-left: 5em;
-   width: 30%;
-   border-top: 1px solid #bbbbbb;
-   border-bottom: none;
+    margin-left: 5em;
+    width: 30%;
+    border-top: 1px solid #bbbbbb;
+    border-bottom: none;
 }
 
 /* Fancy Tables */
