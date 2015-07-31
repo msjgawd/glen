@@ -32,9 +32,10 @@ for table in tree.xpath('/html/body/div/table | /html/body/div/center/table'):
             pricestring[1:max(pricestring.find('U'), pricestring.find('C'))].replace(',', ''))
         if lot['price'] >= 0:
             lot['currency'] = pricestring[max(pricestring.find('U'), pricestring.find('C')):]
+            if lot['currency'] == 'US':
+                lot['currency'] = 'USD'
         lot['contact'] = cells[7].text_content().strip().replace('\t', '').replace('\n', '<br/>')
         divlots.append(lot)
-    print i
     if not f:
         lots.append([i, divlots])
 

@@ -46,7 +46,8 @@
     <p id="lfs_heading" class="center_text">Lots for Sale</p>
 
     {% for division in lots %}
-        <p id="lfs_div{{ division[0] }}_label" class="center_text lfs_div_label">Division {{ division[0] }}</p>
+        <p id="lfs_div{{ division[0] }}_label" class="center_text lfs_div_label"><a
+                href="maps.html#tabs-{{ division[0] }}">Division {{ division[0] }}</a></p>
         <table id="lfs_div{{ division[0] }}" class="fancy_table center_horizontal_in_parent lfs_table">
             <thead>
             <tr>
