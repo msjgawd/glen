@@ -15,10 +15,6 @@
 </head>
 
 <style>
-    #content {
-        overflow: auto;
-    }
-
     #tabs ul li {
         cursor: pointer;
         display: inline-block;
@@ -64,14 +60,6 @@
         background-color: #ccc;
     }
 
-    h1 {
-        vertical-align: top;
-        margin: 0 0 0 1em;
-        padding: 1em 1em 0em 0em;
-        text-align: left;
-        font-family: 'Roboto Condensed', sans-serif;
-    }
-
     #tabs ul li.selected a {
         color: #eee;
     }
@@ -84,17 +72,13 @@
 
     .tabs {
         background-color: #bbb;
-        padding: 1em 1em 1em 1em;
+        padding: 1em 1em 2em 1em;
         margin-top: 0;
     }
 
     .tabs img {
-        max-width: 75%;
-        max-height: 75%;
-    }
-
-    .tabs {
-        height: 32em;
+        max-width: 80%;
+        max-height: 80%;
     }
 
     .tabs p {
@@ -126,10 +110,7 @@
 </div>
 <div id="navbarplaceholder" class="navbarplaceholder placeholder"></div>
 <div id="content" class="fill_width min_partial_height" style="background-color:#d7d7d7;">
-    <h1>Maps</h1>
-
     <!-- tabs -->
-
     <div id="tabs">
         <ul style="margin-bottom: 0">
             <li id="tabs-glen-tab" class="selected"><a href="#tabs-glen">Glen Map</a></li>
