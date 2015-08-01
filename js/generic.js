@@ -1,15 +1,12 @@
 function adjust_sizes() {
     var viewportheight = $(window).height();
     var navbarheight = $('#navbar').outerHeight();
-    var footerheight = $('#footer').outerHeight();
+    var footerheight = $('div#footer hr').offset().top - $('div#footer').offset().top;
     $('.fill_height, .fill_view').height(viewportheight - navbarheight);
     $('.half_height').height((viewportheight - navbarheight) / 2);
     $('.partial_height').height(viewportheight - footerheight - navbarheight);
     $('.min_partial_height').css('min-height', viewportheight - footerheight - navbarheight);
 }
-
-$(window).load(function () {
-});
 
 $(document).ready(function () {
     var logo = '<link rel="shortcut icon" href=images/glenlogo.gif>';
