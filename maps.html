@@ -175,8 +175,7 @@
         }, function () {
             $(this).children('a').removeClass('hover');
         });
-        $('#tabs-' + location.hash.substr(1) + '-tab').siblings().removeClass('selected').addClass('unselected');
-        $('#tabs-' + location.hash.substr(1) + '-tab').removeClass('unselected').addClass('selected');
+        if (location.hash) $('#tabs-' + location.hash.substr(1) + '-tab').click();
     });
 </script>
 
